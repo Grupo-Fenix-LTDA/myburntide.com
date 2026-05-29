@@ -1,0 +1,261 @@
+/* Burntide auxiliary pages — privacy, terms, support, contact */
+
+:root {
+  --brown: #6B2014;
+  --brown-deep: #4d1409;
+  --saffron: #F2B233;
+  --ember: #E8651C;
+  --lava: #D63D14;
+  --crimson: #A8240E;
+  --cream: #FFF8E7;
+  --ink: #1a1a1a;
+  --muted: #6f6258;
+  --line: #e8e2d5;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: 'Nunito Sans', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--lava); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.brand-bar {
+  background: linear-gradient(135deg, var(--brown), var(--brown-deep));
+  padding: 16px 24px;
+  text-align: center;
+}
+
+.brand-bar h1 {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: .5px;
+}
+
+.page-hero {
+  padding: 60px 24px 30px;
+  text-align: center;
+}
+
+.page-hero h2 {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 700;
+  color: var(--brown);
+  line-height: 1;
+}
+
+main.legal {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 40px 60px;
+}
+
+main.legal p {
+  text-align: justify;
+  margin: 0 0 16px;
+}
+
+main.legal p > b:first-child,
+main.legal p > strong:first-child {
+  display: block;
+  margin-top: 28px;
+  margin-bottom: 6px;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+main.legal ul,
+main.legal ol {
+  margin: 0 0 16px 24px;
+}
+
+main.legal li { margin-bottom: 4px; }
+
+main.legal a {
+  color: var(--lava);
+  font-weight: 600;
+}
+
+.contact-table {
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  padding: 0 40px;
+}
+
+.contact-table table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.contact-table td {
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+.contact-table tr:last-child td { border-bottom: none; }
+
+.contact-table .label {
+  width: 40%;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.contact-table .label small {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.contact-table .value {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.contact-table .value a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.tabs {
+  max-width: 1100px;
+  margin: 30px auto 0;
+  padding: 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom: 3px solid var(--brown);
+  gap: 0;
+}
+
+.tab {
+  background: none;
+  border: 3px solid transparent;
+  border-bottom: 0;
+  padding: 14px 36px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+  margin-bottom: -3px;
+  transition: color .15s;
+}
+
+.tab:hover { color: var(--brown); }
+
+.tab.active {
+  color: var(--brown);
+  border-color: var(--brown);
+  border-bottom: 3px solid #fff;
+  background: #fff;
+}
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+.tab-title {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  color: var(--brown);
+  margin: 40px 0 24px;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: 0;
+  text-align: left;
+  padding: 20px 40px 20px 0;
+  font-family: 'Nunito Sans', Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-question::after {
+  content: "";
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform .25s;
+}
+
+.faq-item.open .faq-question::after {
+  transform: translateY(-30%) rotate(-135deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, padding .35s ease;
+  padding: 0;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 800px;
+  padding: 0 0 20px;
+}
+
+.faq-answer p { margin: 0 0 12px; }
+.faq-answer p:last-child { margin-bottom: 0; }
+
+
+@media (max-width: 767px) {
+  .page-hero { padding: 40px 20px 20px; }
+  main.legal,
+  .contact-table,
+  .tabs { padding-left: 20px; padding-right: 20px; }
+  .tab { padding: 12px 18px; font-size: 17px; }
+  .contact-table td { padding: 14px 16px; }
+  .contact-table .label { width: 45%; }
+}
+
+
+/* ====== DigiStore24 site-footer (Burntide) ====== */
+.site-footer { background-color: var(--brown-deep); color:#fff; padding:3rem 1.5rem 1.75rem; font-family:'Nunito Sans', Arial, sans-serif; line-height:1.4; box-sizing:border-box; width:100%; overflow-x:hidden; border-top:1px solid rgba(255,255,255,.08); }
+.site-footer * { box-sizing:border-box; }
+.footer-inner { max-width:960px; margin:0 auto; text-align:center; }
+.footer-brand { font-family:'Oswald', sans-serif; font-weight:700; font-size:2rem; letter-spacing:.04em; color:var(--saffron); margin-bottom:.75rem; }
+.footer-links { list-style:none; margin:0 0 1.5rem; padding:0; display:flex; flex-wrap:wrap; justify-content:center; gap:.5rem 1.75rem; }
+.footer-links a { color:#fff; text-decoration:none; font-size:.95rem; font-weight:600; transition:color .2s; }
+.footer-links a:hover { color:var(--saffron); text-decoration:underline; }
+.footer-disclaimer { color:rgba(255,255,255,.78); text-align:justify; font-size:.78rem; line-height:1.5; max-width:860px; margin:0 auto 1rem; }
+.footer-disclaimer strong { color:#fff; }
+.footer-copy { color:rgba(255,255,255,.6); font-size:.8rem; letter-spacing:.04em; margin-top:1.25rem; }
+@media (max-width:767px){ .site-footer { padding:2rem 1rem; } .footer-links { gap:.5rem 1rem; } }
