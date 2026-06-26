@@ -10,7 +10,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<script src="scarcity.js"></script>
   <!-- ============================================================= -->
   <!-- Digistore24  (PLACEHOLDER: trocar token e product_id pela Burntide) -->
   <!-- ============================================================= -->
@@ -54,16 +53,6 @@
 
     <p class="main-headline">WAIT — You Qualify For 3 FREE Bottles!</p>
     <p class="sub-headline">Claim Your 3 FREE Bottles Below!</p>
-
-    <div style="text-align:center;">
-      <span class="timer-display">Bonus Expires in <span style="color:#A8240E;" id="timer-display-1">10:00</span></span>
-    </div>
-
-    <div class="status-strip">
-      <span><span class="live-dot"></span> Sale Status: <strong>Live</strong></span>
-      <span>⏳ Bottles Remaining: <strong><span id="bottles-remaining">31</span></strong></span>
-    </div>
-
     <!-- OfferBox 1 -->
     <div class="offer-box">
       <div class="offer-top">
@@ -86,7 +75,6 @@
         <div class="offer-checks">
           <div class="offer-check">9-month complete supply</div>
           <div class="offer-check">$49/bottle — locked-in price</div>
-          <div class="offer-check">Free shipping included</div>
         </div>
         <a href="#" class="cta-orange accept-link">YES! UPGRADE MY ORDER →</a>
         <div class="trust-badges">
@@ -122,16 +110,6 @@
       <p>The question isn't what happens if you stop taking Burntide.</p>
       <p><strong>The question is: why would you stop when it's finally working?</strong></p>
     </div>
-
-    <div style="text-align:center;">
-      <span class="timer-display">Offer Expires in <span style="color:#A8240E;" id="timer-display-2">10:00</span></span>
-    </div>
-
-    <div class="status-strip">
-      <span><span class="live-dot"></span> Sale Status: <strong>Live</strong></span>
-      <span>⏳ Bottles Remaining: <strong><span id="bottles-remaining">31</span></strong></span>
-    </div>
-
     <!-- Repeat offer card -->
     <div class="offer-box">
       <div class="offer-top">
@@ -153,7 +131,6 @@
         <div class="offer-checks">
           <div class="offer-check">9-month complete supply</div>
           <div class="offer-check">$49/bottle — locked-in price</div>
-          <div class="offer-check">Free shipping included</div>
         </div>
         <a href="#" class="cta-orange accept-link">YES! UPGRADE MY ORDER →</a>
         <div class="trust-badges">
@@ -218,6 +195,7 @@
         <a href="https://burntide.com/contact" rel="nofollow" target="_blank">Contact</a>
         <a href="https://burntide.com/terms" rel="nofollow" target="_blank">Terms</a>
         <a href="https://burntide.com/privacy" rel="nofollow" target="_blank">Privacy</a>
+        <a href="../labels.html" target="_blank">Supplement Facts</a>
       </div>
       <p class="footer-disclaimer">Statements on this website have not been evaluated by the Food and Drug Administration. Products are not intended to diagnose, treat, cure or prevent any disease. Always consult with your healthcare provider before starting any new supplement regimen.</p>
       <p class="footer-copy">&copy; 2026 BURNTIDE. All rights reserved.</p>
@@ -237,22 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
     l.href = p + '?' + e + (h ? '#' + h : '');
   });
 });
-</script>
-<script>
-(function () {
-  var totalSeconds = 600;
-  function pad(n) { return n < 10 ? '0' + n : n; }
-  function tick() {
-    if (totalSeconds <= 0) { return; }
-    var m = Math.floor(totalSeconds / 60), s = totalSeconds % 60;
-    var str = pad(m) + ':' + pad(s);
-    var el1 = document.getElementById('timer-display-1'), el2 = document.getElementById('timer-display-2');
-    if (el1) el1.textContent = str;
-    if (el2) el2.textContent = str;
-    totalSeconds--;
-  }
-  tick(); setInterval(tick, 1000);
-})();
 </script>
 <script>
 (function () {

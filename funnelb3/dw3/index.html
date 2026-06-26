@@ -10,7 +10,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<script src="../up1-01/scarcity.js"></script>
   <!-- ============================================================= -->
   <!-- Digistore24  (PLACEHOLDER: trocar token e product_id pela Burntide) -->
   <!-- ============================================================= -->
@@ -83,7 +82,6 @@
       <ul style="margin: 8px 0 0 18px;">
         <li>💰 Just <strong>$27 per bottle</strong> (normally $97)</li>
         <li>💰 Total: <strong>$87</strong> (save over $210)</li>
-        <li>🚚 FREE Priority Shipping when added to your Burntide order</li>
         <li>🛡️ Same 60-Day Guarantee on every bottle</li>
       </ul>
     </div>
@@ -120,23 +118,12 @@
     <div class="warning-section">
       <h2>⚠️ This is your last chance at this price. Once you leave this page, this offer is gone.</h2>
     </div>
-
-    <div style="text-align:center;">
-      <span class="timer-display">Offer Expires in <span style="color:#A8240E;" id="timer-display-1">08:29</span></span>
-    </div>
-    <div class="status-strip">
-      <span><span class="live-dot"></span> Sale Status: <strong>Live</strong></span>
-      <span>🔥 312 customers started with 3 bottles this week</span>
-      <span>⏳ Bottles Remaining: <strong><span id="bottles-remaining">31</span></strong></span>
-    </div>
-
     <div class="offer-card">
       <h3>Smart Start — 75% Off · 3-Month Supply · Complete Gut Reset Starter</h3>
       <img src="images/gutbooster-3.png" alt="GutBooster 3 Bottles Starter" class="product">
       <div class="offer-line"><span>GutBooster × 3 bottles (retail $97/each)</span><span class="val strike">$291.00</span></div>
       <div class="offer-line"><span>Your discount (75% off)</span><span class="val save">−$204.00</span></div>
       <div class="offer-line"><span>Price per bottle</span><span class="val">$27.00</span></div>
-      <div class="offer-line"><span>Priority Shipping</span><span class="val free">FREE</span></div>
       <div class="offer-total">
         <span class="offer-total-label">Today's Total</span>
         <span class="offer-total-amount">$87</span>
@@ -146,17 +133,13 @@
         <div class="offer-check">Try it risk-free — full refund on every bottle, no questions asked</div>
         <div class="offer-check">90-day microbiome reset starter cycle</div>
         <div class="offer-check">$27/bottle — same discount as the 6-bottle offer</div>
-        <div class="offer-check">FREE Priority Shipping included</div>
         <div class="offer-check">Full 60-Day Money-Back Guarantee</div>
       </div>
-      <p style="background:var(--cream); border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14.5px; line-height:1.55; color:#4a3f37;">
-        🔥 <strong>312 customers started with 3 bottles this week</strong> and are already reporting flatter bellies, fewer cravings, and clearer Burntide results.
-      </p>
       <a href="#" class="cta-orange">✔ Yes! Add To My Order</a>
       <div class="trust-row trust-cards-row">
         <img src="images/cards.png" alt="Payment Methods">
       </div>
-      <p style="text-align:center; font-size:13px; color:var(--muted); margin-top:8px;">✔ 60-Day Money-Back Guarantee · ✔ Free Priority Shipping</p>
+      <p style="text-align:center; font-size:13px; color:var(--muted); margin-top:8px;">✔ 60-Day Money-Back Guarantee</p>
     </div>
 
     <div class="decline" style="margin-bottom:18px;"><strong>OR</strong></div>
@@ -180,6 +163,7 @@
         <a href="https://burntide.com/terms" rel="nofollow" target="_blank">Terms</a>
         <a href="https://burntide.com/privacy" rel="nofollow" target="_blank">Privacy</a>
         <a href="https://burntide.com/contact" rel="nofollow" target="_blank">Contact</a>
+        <a href="../labels.html" target="_blank">Supplement Facts</a>
       </div>
       <p class="footer-disclaimer">Statements found on this website have not been evaluated by the FDA. Products on this website are not intended to diagnose, treat, cure, or prevent any disease. If you are pregnant, nursing, taking medication, or have a medical condition, consult your physician before using our products.</p>
       <p class="footer-copy">&copy; 2026 BURNTIDE. All rights reserved.</p>
@@ -199,21 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
     l.href = p + '?' + e + (h ? '#' + h : '');
   });
 });
-</script>
-<script>
-(function () {
-  var totalSeconds = 509; // 08:29
-  function pad(n) { return n < 10 ? '0' + n : n; }
-  function tick() {
-    if (totalSeconds <= 0) { return; }
-    var m = Math.floor(totalSeconds / 60), s = totalSeconds % 60;
-    var str = pad(m) + ':' + pad(s);
-    var el = document.getElementById('timer-display-1');
-    if (el) el.textContent = str;
-    totalSeconds--;
-  }
-  tick(); setInterval(tick, 1000);
-})();
 </script>
 </body>
 </html>

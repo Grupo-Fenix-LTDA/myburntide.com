@@ -10,7 +10,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<script src="../up1-01/scarcity.js"></script>
   <!-- ============================================================= -->
   <!-- Digistore24  (PLACEHOLDER: trocar token e product_id pela Burntide) -->
   <!-- ============================================================= -->
@@ -56,16 +55,6 @@
 
     <p class="main-headline">WAIT — You Now Qualify For A Special Offer!</p>
     <p class="sub-headline">Add Glycovit To Your Order Below</p>
-
-    <div style="text-align:center;">
-      <span class="timer-display">Offer Expires in <span style="color:#A8240E;" id="timer-display-1">09:42</span></span>
-    </div>
-
-    <div class="status-strip">
-      <span><span class="live-dot"></span> Sale Status: <strong>Live</strong></span>
-      <span>⏳ Bottles Remaining: <strong><span id="bottles-remaining">31</span></strong></span>
-    </div>
-
     <div class="offer-box">
       <div class="offer-top">
         <div class="offer-top-title">Buy 2 + 2 FREE · 4-Month Supply</div>
@@ -86,7 +75,6 @@
         <div class="offer-checks">
           <div class="offer-check">4-month supply</div>
           <div class="offer-check">$49/bottle — great value</div>
-          <div class="offer-check">Free shipping included</div>
         </div>
         <a href="#" class="cta-orange">YES! ADD BUY 2 GET 2 FREE →</a>
       </div>
@@ -112,7 +100,6 @@
         <div class="offer-checks">
           <div class="offer-check">6-month complete supply</div>
           <div class="offer-check">$49/bottle — locked-in price</div>
-          <div class="offer-check">Free shipping included</div>
         </div>
         <a href="#" class="cta-orange">YES! ADD BUY 4 GET 2 FREE →</a>
       </div>
@@ -138,7 +125,6 @@
         <div class="offer-checks">
           <div class="offer-check">5-month supply</div>
           <div class="offer-check">$49/bottle — best bang for buck</div>
-          <div class="offer-check">Free shipping included</div>
         </div>
         <a href="#" class="cta-orange">YES! ADD BUY 3 GET 2 FREE →</a>
       </div>
@@ -173,6 +159,7 @@
         <a href="https://burntide.com/contact" rel="nofollow" target="_blank">Contact</a>
         <a href="https://burntide.com/terms" rel="nofollow" target="_blank">Terms</a>
         <a href="https://burntide.com/privacy" rel="nofollow" target="_blank">Privacy</a>
+        <a href="../labels.html" target="_blank">Supplement Facts</a>
       </div>
       <p class="footer-disclaimer">Statements on this website have not been evaluated by the Food and Drug Administration. Products are not intended to diagnose, treat, cure or prevent any disease.</p>
       <p class="footer-copy">&copy; 2026 BURNTIDE. All rights reserved.</p>
@@ -192,21 +179,6 @@ document.addEventListener('DOMContentLoaded', () => {
     l.href = p + '?' + e + (h ? '#' + h : '');
   });
 });
-</script>
-<script>
-(function () {
-  var totalSeconds = 582; // 09:42
-  function pad(n) { return n < 10 ? '0' + n : n; }
-  function tick() {
-    if (totalSeconds <= 0) { return; }
-    var m = Math.floor(totalSeconds / 60), s = totalSeconds % 60;
-    var str = pad(m) + ':' + pad(s);
-    var el1 = document.getElementById('timer-display-1');
-    if (el1) el1.textContent = str;
-    totalSeconds--;
-  }
-  tick(); setInterval(tick, 1000);
-})();
 </script>
 </body>
 </html>
