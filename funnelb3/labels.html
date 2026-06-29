@@ -3,37 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Burntide — Supplement Facts &amp; Labels</title>
-  <meta name="description" content="Burntide supplement facts and product labels.">
+  <title>Supplement Facts &amp; Labels — Burntide</title>
+  <meta name="description" content="Full ingredient panel and Supplement Facts for Burntide, Glycovit and Gut Booster.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root { --brown-deep:#4d1409; --saffron:#F2B233; --cream:#FBF6EF; }
+    :root { --brown-deep:#4d1409; --saffron:#F2B233; --cream:#FBF6EF; --ink:#2c1810; --ink-soft:#5a4538; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: "Nunito Sans", Arial, sans-serif; background: var(--cream); color: #2c1810; line-height: 1.55; }
+    body { font-family: "Nunito Sans", Arial, sans-serif; background: var(--cream); color: var(--ink); line-height: 1.55; }
     .labels-header { background: var(--brown-deep); color: #fff; padding: 24px 16px; text-align: center; }
     .labels-header a { color: var(--saffron); text-decoration: none; font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1.6rem; letter-spacing: .04em; }
     .labels-wrap { max-width: 1000px; margin: 0 auto; padding: 40px 20px 60px; }
     .labels-wrap h1 { font-family: 'Oswald', sans-serif; font-size: 2rem; margin-bottom: 8px; text-align: center; color: var(--brown-deep); }
-    .labels-wrap p.intro { text-align: center; color: #5a4538; margin-bottom: 32px; font-size: 0.95rem; }
-    .label-card { background: #fff; border: 1px solid #e5dccf; border-radius: 10px; padding: 28px 20px; margin-bottom: 28px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    .labels-wrap p.intro { text-align: center; color: var(--ink-soft); margin-bottom: 24px; font-size: 0.95rem; }
+
+    .toc { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0 auto 36px; padding: 14px 18px; background: #fff; border: 1px solid #e5dccf; border-radius: 10px; max-width: 720px; }
+    .toc a { color: var(--brown-deep); text-decoration: none; font-weight: 700; font-size: 0.9rem; padding: 6px 12px; border-radius: 999px; background: #fbf2dc; transition: background .15s ease; }
+    .toc a:hover { background: var(--saffron); color: #fff; }
+
+    .label-card { background: #fff; border: 1px solid #e5dccf; border-radius: 10px; padding: 28px 20px; margin-bottom: 28px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); scroll-margin-top: 24px; }
     .label-card h2 { font-family: 'Oswald', sans-serif; font-size: 1.3rem; margin-bottom: 14px; color: var(--brown-deep); }
     .label-card img { display: block; width: 100%; max-width: 900px; margin: 0 auto 18px; height: auto; border-radius: 6px; border: 1px solid #e5dccf; }
-    .label-meta { font-size: 0.9rem; color: #5a4538; line-height: 1.65; }
+    .label-meta { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.65; }
     .label-meta p { margin-bottom: 10px; }
-    .label-meta b { color: #2c1810; }
+    .label-meta b { color: var(--ink); }
     .label-meta hr { margin: 14px 0; border: 0; border-top: 1px solid #ecdfd0; }
+
     .disclaimer-box { background: #fff5e6; border-left: 4px solid var(--saffron); padding: 16px 18px; border-radius: 6px; font-size: 0.85rem; color: #5a3a00; margin-top: 24px; line-height: 1.5; }
     .back-link { display: inline-block; margin-top: 24px; color: var(--brown-deep); text-decoration: none; font-weight: 700; font-size: 0.95rem; }
     .back-link:hover { text-decoration: underline; }
+
     @media (max-width: 600px) {
       .labels-wrap { padding: 24px 14px 40px; }
       .labels-wrap h1 { font-size: 1.5rem; }
       .label-card { padding: 20px 14px; }
       .label-card h2 { font-size: 1.1rem; }
+      .toc { gap: 6px; padding: 12px; }
+      .toc a { font-size: 0.8rem; padding: 5px 10px; }
     }
   </style>
 </head>
@@ -45,11 +54,18 @@
 
   <main class="labels-wrap">
     <h1>Supplement Facts &amp; Product Labels</h1>
-    <p class="intro">Full ingredient panel and supplement facts for Burntide.</p>
+    <p class="intro">Full ingredient panels and Supplement Facts for every product available in this offer.</p>
 
-    <section class="label-card">
+    <nav class="toc" aria-label="Jump to product label">
+      <a href="#burntide">Burntide</a>
+      <a href="#glycovit">Glycovit</a>
+      <a href="#gutbooster">Gut Booster</a>
+    </nav>
+
+    <!-- ============================== BURNTIDE ============================== -->
+    <section class="label-card" id="burntide">
       <h2>Burntide — Weight Loss Support · Dietary Supplement · 30 Gummies</h2>
-      <img src="images/burntide-label-full.jpg" alt="Burntide Supplement Facts Label (full product label)">
+      <img src="images/burntide-label-full.jpg" alt="Burntide Weight Loss Support — full Supplement Facts label">
       <div class="label-meta">
         <p><b>Serving Size:</b> 1 Gummy (2.5g per gummy) &nbsp;·&nbsp; <b>Servings Per Container:</b> 30</p>
         <hr>
@@ -69,8 +85,51 @@
       </div>
     </section>
 
+    <!-- ============================== GLYCOVIT ============================== -->
+    <section class="label-card" id="glycovit">
+      <h2>Glycovit — Ketone Liquid Drops · Dietary Supplement · 2 fl oz / 30 ml</h2>
+      <img src="images/glycovit-label-full.jpg" alt="Glycovit Ketone Liquid Drops — full Supplement Facts label">
+      <div class="label-meta">
+        <p><b>Serving Size:</b> 1 ml &nbsp;·&nbsp; <b>Servings Per Container:</b> 30</p>
+        <hr>
+        <p><b>Amount Per Serving:</b></p>
+        <p>Chromium (as chromium picolinate): 0.7 mcg (2% DV)</p>
+        <p><b>Proprietary Blend:</b> 200 mg — Maca (Lepidium meyenii) Root Extract, Grape (Vitis vinifera) Seed Extract, Guarana (Paullinia cupana) Seed Extract, African Mango (Irvingia gabonensis) Seed Extract, Eleutherococcus Senticosus Root Extract, Astragalus Root Extract, Green Tea (Camellia sinensis) Leaf Extract, Gymnema Leaf Extract, Coleus Forskohlii Root Extract, Capsicum Annuum Fruit Extract, Grapefruit (Citrus paradisi) Fruit Extract, Panax Ginseng Aerial Extract, Raspberry Ketones, L-Glutamine, L-Tyrosine, L-Arginine Base, Beta-Alanine, Monoammonium Glycyrrhizinate, GABA (Gamma amino butyric acid), L-Ornithine HCL, L-Tryptophan, L-Carnitine Base.</p>
+        <hr>
+        <p><b>Other Ingredients:</b> Glycerin, Water, Organic Lemon Extract, Stevia Extract 97% (Reb A), Xylitol, Sodium Benzoate, Potassium Sorbate, Citric Acid, and Natural Flavors.</p>
+        <hr>
+        <p><b>Suggested Use:</b> Shake well before each use. Take 1 or 2 droppers full daily. Place in mouth and swallow.</p>
+        <p><b>Caution:</b> Do not exceed recommended dose. Pregnant or nursing mothers, children under the age of 18 and individuals with a known medical condition should consult a physician before using this or any dietary supplement.</p>
+        <p><b>Storage:</b> Keep away from heat, light, and humidity to preserve freshness. Keep out of the reach of children. Do not use if safety seal is damaged or missing. Store in a cool, dry place.</p>
+        <hr>
+        <p><b>Distributed By:</b> GLYCOVIT, 11870 62nd St N, Largo, FL 33773 &nbsp;·&nbsp; support@healthyconsumer.us</p>
+        <p><b>Made in the USA</b> with globally sourced ingredients · Manufactured in an FDA registered facility.</p>
+      </div>
+    </section>
+
+    <!-- ============================== GUT BOOSTER ============================== -->
+    <section class="label-card" id="gutbooster">
+      <h2>Gut Booster — Dietary Supplement · 60 Capsules</h2>
+      <img src="images/gutbooster-label-full.jpg" alt="Gut Booster — full Supplement Facts label">
+      <div class="label-meta">
+        <p><b>Serving Size:</b> 2 capsules &nbsp;·&nbsp; <b>Servings Per Container:</b> 30</p>
+        <hr>
+        <p><b>Proprietary Blend:</b> 684 mg — Oat Bran (Avena sativa) Powder, Prune (Prunus domestica) Fruit Powder, Cascara Sagrada (Frangula purshiana) Bark Powder, Buckthorn (Rhamnus frangula) Bark Extract, Pumpkin Seed (Cucurbitae semen) Powder, Cayenne Pepper (Capsicum annuum) Fruit Powder, Licorice (Glycyrrhiza glabra) Root Powder, Rhubarb (Rheum rhabarbarum) Root Extract, Acai (Euterpe oleracea) Berry Extract, Senna Leaf Powder, Fennel (Foeniculum vulgare) Seed Extract.</p>
+        <hr>
+        <p><b>Other Ingredients:</b> Microcrystalline Cellulose, Gelatin (capsule), Magnesium Stearate.</p>
+        <hr>
+        <p><b>Suggested Use:</b> As a dietary supplement, take two (2) capsules daily with an 8 oz. glass of water.</p>
+        <p><b>Notice:</b> This product contains Senna, Buckthorn, and Cascara. Read and follow directions carefully. Do not use it if you have or develop diarrhea, loose stools or abdominal pain. Consult your physician if you have frequent diarrhea.</p>
+        <p><b>Caution:</b> Do not exceed recommended dose. Pregnant or nursing mothers, children under the age of 18 and individuals with a known medical condition should consult a physician before using this or any dietary supplement.</p>
+        <p><b>Storage:</b> Keep away from heat, light, and humidity to preserve freshness. Keep out of the reach of children. Do not use if safety seal is damaged or missing. Store in a cool, dry place.</p>
+        <hr>
+        <p><b>Distributed For:</b> GUTBOOSTER, 11870 62nd St N, Largo, FL 33773 &nbsp;·&nbsp; support@healthyconsumer.us</p>
+        <p><b>Made in the USA</b> with globally sourced ingredients · Manufactured in an FDA registered facility.</p>
+      </div>
+    </section>
+
     <div class="disclaimer-box">
-      <p>* These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+      <p>* These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure, or prevent any disease.</p>
     </div>
 
     <a href="index.html" class="back-link">← Back to homepage</a>
