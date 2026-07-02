@@ -19,7 +19,7 @@
 
 /* ----- reset / base ----- */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   font-family: 'Nunito Sans', sans-serif;
@@ -28,6 +28,7 @@ body {
   color: var(--ink);
   background: var(--white);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -372,8 +373,8 @@ a { text-decoration: none; color: inherit; }
 .product-copy b { color: var(--brown); font-weight: 700; }
 
 .ingredients-section { padding: 70px 0; background: #fdfaf3; }
-.ingredients-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px; max-width: 980px; margin-left: auto; margin-right: auto; }
-.ingredient-card { display: flex; flex-direction: column; gap: 12px; }
+.ingredients-grid { display: flex; justify-content: center; flex-wrap: wrap; gap: 28px; margin-top: 40px; }
+.ingredient-card { flex: 0 1 440px; display: flex; flex-direction: column; gap: 12px; }
 .ingredient-img-wrap {
   border: 2px solid var(--line); border-radius: 14px; overflow: hidden;
   aspect-ratio: 1/1; background: #fff;
@@ -460,21 +461,27 @@ a { text-decoration: none; color: inherit; }
     box-shadow: 0 8px 20px rgba(0,0,0,.1);
   }
   .hero-inner { grid-template-columns: 1fr; gap: 36px; }
-  .science-block, .science-block.media-right { grid-template-columns: 1fr; gap: 22px; }
+  .science-block, .science-block.media-left, .science-block.media-right { grid-template-columns: 1fr; gap: 22px; }
   .science-block.media-right .science-media { order: 0; }
   .product-inner { grid-template-columns: 1fr; gap: 28px; }
   .bonus-grid { grid-template-columns: 1fr; max-width: 420px; margin: 36px auto 0; }
-  .ingredients-grid { grid-template-columns: repeat(2, 1fr); }
+  .ingredient-card { flex: 0 1 340px; }
   .benefits-grid { grid-template-columns: repeat(3, 1fr); }
   .faq-inner { grid-template-columns: 1fr; gap: 30px; }
-  .faq-aside { position: static; } .faq-aside h2 { text-align: center; }
+  .faq-aside { position: static; min-width: 0; }
+  .faq-aside h2 { text-align: center; }
+  .faq-aside img { max-width: 100%; width: auto; }
 }
 @media (max-width: 767px) {
   body { font-size: 16px; }
   .packages-grid { grid-template-columns: 1fr; max-width: 380px; margin: 40px auto 0; }
-  .pkg-card.featured { margin-top: 0; order: -1; }
+  .pkg-card { margin-top: 0; }
+  .pkg-card.featured { margin-top: 0; }
+  .pkg-card:nth-child(1) { order: 3; }
+  .pkg-card:nth-child(2) { order: 1; }
+  .pkg-card:nth-child(3) { order: 2; }
   .guarantee-body { flex-direction: column; align-items: center; text-align: center; }
-  .ingredients-grid { grid-template-columns: 1fr; max-width: 340px; margin: 36px auto 0; }
+  .ingredient-card { flex: 0 1 100%; max-width: 340px; }
   .benefits-grid { grid-template-columns: repeat(2, 1fr); }
   .references-logos { grid-template-columns: repeat(2, 1fr); }
   .references-cols { grid-template-columns: 1fr; }
